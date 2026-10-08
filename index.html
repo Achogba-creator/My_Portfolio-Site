@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grace Idachaba | Learning & Development Portfolio</title>
+<meta name="description" content="Grace Idachaba — Learning & Development, Technical Training and Capability Development.">
+<style>
+:root{
+  --ink:#16212b;
+  --muted:#5c6872;
+  --paper:#f7f8f6;
+  --white:#ffffff;
+  --accent:#0f6b62;
+  --accent2:#d8eee9;
+  --line:#dfe5e3;
+  --dark:#102c2a;
+  --max:1180px;
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+.nav{position:sticky;top:0;z-index:20;background:rgba(247,248,246,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:800;letter-spacing:-.02em}
+.brand span{display:block;font-size:12px;font-weight:600;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.navlinks{display:flex;gap:26px;font-size:14px;color:#3f4b54}
+.navlinks a:hover{color:var(--accent)}
+.hero{padding:94px 0 78px;background:linear-gradient(135deg,#f7f8f6 0%,#edf5f2 100%)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:center}
+.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.16em;font-weight:800;color:var(--accent);margin-bottom:20px}
+h1{font-size:clamp(46px,6vw,76px);line-height:.98;letter-spacing:-.055em;margin:0 0 26px;max-width:850px}
+.hero p{font-size:20px;color:var(--muted);max-width:720px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:999px;border:1px solid var(--ink);font-weight:700;font-size:14px}
+.btn.primary{background:var(--dark);color:white;border-color:var(--dark)}
+.btn.secondary{background:transparent}
+.hero-card{background:var(--dark);color:white;padding:32px;border-radius:28px;box-shadow:0 22px 60px rgba(16,44,42,.15)}
+.hero-card small{color:#a9c6c1;text-transform:uppercase;letter-spacing:.14em;font-weight:800}
+.hero-card h2{font-size:29px;line-height:1.15;margin:12px 0 24px}
+.hero-card ul{padding:0;margin:0;list-style:none}
+.hero-card li{padding:12px 0;border-top:1px solid rgba(255,255,255,.16)}
+.section{padding:88px 0}
+.section.alt{background:white}
+.section-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:42px}
+.section-head h2{font-size:42px;line-height:1.05;letter-spacing:-.04em;margin:0}
+.section-head p{max-width:520px;color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:27px}
+.card h3{margin:0 0 9px;font-size:20px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.card .tag{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:800;color:var(--accent);margin-bottom:15px}
+.case{display:grid;grid-template-columns:.85fr 1.15fr;gap:0;background:var(--dark);color:white;border-radius:28px;overflow:hidden}
+.case-left{padding:45px}
+.case-left p{color:#c2d4d1}
+.case-right{padding:45px;background:#173c38}
+.case-right h3{font-size:24px;margin-top:0}
+.case-right ul{padding-left:20px;color:#d7e5e2}
+.case-meta{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}
+.pill{border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 11px;font-size:12px;color:#dcebe8}
+.process{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:white}
+.step{padding:28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.step:nth-child(3n){border-right:0}
+.step:nth-last-child(-n+3){border-bottom:0}
+.num{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.12em}
+.step h3{margin:9px 0 5px}
+.step p{margin:0;color:var(--muted);font-size:14px}
+.evidence{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.evidence-item{padding:23px;border:1px solid var(--line);border-radius:16px;background:#fbfcfb;display:flex;gap:18px;align-items:flex-start}
+.evidence-item h3{margin:0 0 4px;font-size:17px}
+.evidence-item p{margin:0;color:var(--muted);font-size:14px}
+.evidence-content{flex:1;min-width:0}
+.evidence-preview{margin:16px 0 0}
+.evidence-preview img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:6px}
+.evidence-preview figcaption{margin-top:6px;color:var(--muted);font-size:12px}
+.workbook-summary{margin-top:16px;padding:16px;background:white;border:1px solid var(--line);border-radius:6px}
+.workbook-summary h4{margin:0 0 10px;font-size:14px}
+.workbook-summary p,.workbook-summary li{font-size:13px}
+.workbook-summary p{margin:0 0 10px}
+.workbook-summary ul{margin:0;padding-left:19px;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.about-portrait{margin:0 0 24px}
+.about-portrait img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 38%;border-radius:8px;border:1px solid var(--line)}
+.about-portrait figcaption{margin-top:7px;color:var(--muted);font-size:13px}
+.quote{font-size:31px;line-height:1.2;letter-spacing:-.03em;font-weight:700;border-left:4px solid var(--accent);padding-left:24px}
+.skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.skill{background:var(--accent2);color:#195b53;padding:8px 12px;border-radius:999px;font-size:13px;font-weight:700}
+.cta{background:var(--accent);color:white;border-radius:28px;padding:52px;display:flex;justify-content:space-between;align-items:center;gap:40px}
+.cta h2{font-size:42px;line-height:1.05;margin:0 0 10px;letter-spacing:-.04em}
+.cta p{margin:0;color:#d7ece8;max-width:650px}
+.cta .btn{background:white;color:var(--dark);border-color:white}
+footer{padding:35px 0;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.footer-inner{display:flex;justify-content:space-between;gap:20px}
+@media(max-width:850px){
+ .navlinks{display:none}.hero-grid,.case,.about-grid{grid-template-columns:1fr}.hero{padding-top:65px}
+ .grid,.process{grid-template-columns:1fr}.step{border-right:0!important;border-bottom:1px solid var(--line)!important}.step:last-child{border-bottom:0!important}
+ .evidence{grid-template-columns:1fr}.section{padding:65px 0}.section-head{display:block}.section-head p{margin-top:14px}
+ .cta{display:block;padding:34px}.cta .btn{margin-top:24px}.footer-inner{display:block}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#home">Grace Idachaba<span>L&D • Technical Training • Capability</span></a>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#services">What I Do</a>
+      <a href="#cases">Case Studies</a>
+      <a href="#approach">Approach</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Learning & Development Portfolio</div>
+      <h1>Turning knowledge into workplace capability.</h1>
+      <p>I design and deliver practical learning across L&D, technical training, capability development, knowledge management and performance support.</p>
+      <div class="actions">
+        <a class="btn primary" href="#cases">Explore case studies</a>
+        <a class="btn secondary" href="#contact">Discuss a training need</a>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <small>What I bring</small>
+      <h2>L&D thinking with technical and operational credibility.</h2>
+      <ul>
+        <li>Training Needs Analysis</li>
+        <li>Learning & Curriculum Design</li>
+        <li>Technical & Process Training</li>
+        <li>Assessment & Competency</li>
+        <li>Coaching & Performance Support</li>
+        <li>Knowledge Management</li>
+      </ul>
+    </aside>
+  </div>
+</header>
+
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div>
+      <div class="eyebrow">About</div>
+      <h2 class="section-head" style="display:block;margin:0 0 20px"><span style="font-size:42px">A performance-led approach to learning.</span></h2>
+      <p>I am a Learning & Development and Technical Training professional with experience designing and delivering learning in complex operational and technology environments.</p>
+      <p>My approach starts with the performance requirement: identify the capability gap, determine the right intervention, design practical learning, assess application and reinforce capability through coaching and performance support.</p>
+    </div>
+    <div>
+      <figure class="about-portrait"><img src="me.webp" alt="Grace Idachaba"><figcaption>Grace Idachaba</figcaption></figure>
+      <div class="quote">“I bridge the gap between what an organisation needs employees to do and what employees need to learn to do it well.”</div>
+      <div class="skills">
+        <span class="skill">TNA</span><span class="skill">Instructional Design</span><span class="skill">Facilitation</span>
+        <span class="skill">Technical Training</span><span class="skill">Assessment</span><span class="skill">Coaching</span>
+        <span class="skill">Knowledge Management</span><span class="skill">Performance Support</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">What I Do</div><h2>Learning solutions built around the real capability need.</h2></div>
+      <p>From diagnosis to delivery and reinforcement, I can support the learning lifecycle rather than treating training as a standalone event.</p>
+    </div>
+    <div class="grid">
+      <article class="card"><h3>Training Needs Analysis</h3><p>Identify knowledge, skill and capability gaps and translate evidence into targeted learning priorities.</p></article>
+      <article class="card"><h3>Learning & Curriculum Design</h3><p>Design structured programmes around what employees need to know, do and demonstrate.</p></article>
+      <article class="card"><h3>Technical Training</h3><p>Translate technical subjects into practical learning, including Azure infrastructure and cloud technologies.</p></article>
+      <article class="card"><h3>Facilitation</h3><p>Use explanation, demonstration, practice, scenarios and knowledge checks to move learners toward application.</p></article>
+      <article class="card"><h3>Assessment & Competency</h3><p>Measure knowledge, application and practical skill against the level of performance expected.</p></article>
+      <article class="card"><h3>Coaching & Performance Support</h3><p>Reinforce learning with targeted coaching, job aids, knowledge resources and refresher interventions.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="cases">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Case Studies</div><h2>Evidence from complex learning environments.</h2></div>
+      <p>Two complementary experiences demonstrate my ability to work across operational capability and technical enablement.</p>
+    </div>
+    <div class="case">
+      <div class="case-left">
+        <div class="eyebrow" style="color:#8ed4ca">Featured case study</div>
+        <h2 style="font-size:40px;line-height:1.05;margin:0 0 15px">National Single Window Project</h2>
+        <p><strong>Lead Trainer</strong> — capability development across customer support, product/process learning, assessment, knowledge management and performance support.</p>
+        <div class="case-meta"><span class="pill">4,000+ team context</span><span class="pill">Customer Support</span><span class="pill">TNA</span><span class="pill">Performance</span></div>
+      </div>
+      <div class="case-right">
+        <h3>The capability challenge</h3>
+        <ul>
+          <li>Low product knowledge and inconsistent troubleshooting</li>
+          <li>Long resolution times and repeated enquiries</li>
+          <li>Inconsistent customer communication</li>
+          <li>Knowledge Base underutilisation</li>
+          <li>Critical knowledge concentrated among experienced employees</li>
+        </ul>
+        <h3 style="margin-top:30px">L&D response</h3>
+        <p>Training Needs Analysis → competency and gap analysis → structured product/process learning → assessment and reinforcement → knowledge resources → QA-to-training feedback loop → performance measurement.</p>
+      </div>
+    </div>
+    <div style="height:18px"></div>
+    <div class="case" style="background:#203039">
+      <div class="case-left">
+        <div class="eyebrow" style="color:#a9d6df">Technical training case</div>
+        <h2 style="font-size:40px;line-height:1.05;margin:0 0 15px">Azure Infrastructure Training</h2>
+        <p><strong>Azure Infrastructure Trainer</strong> — trained 300+ learners through technical enablement, onboarding, workshops, labs, learning materials, assessment and coaching.</p>
+      </div>
+      <div class="case-right" style="background:#293d47">
+        <h3>Technical capability</h3>
+        <p>Azure Virtual Machines, Storage, Networking, Identity & Access Management, RBAC, PowerShell, ARM Templates, Terraform, cloud infrastructure and automation.</p>
+        <h3>Why it matters</h3>
+        <p>My technical background means I can work with subject-matter complexity while applying structured learning principles to build practical learner capability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="approach">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Approach</div><h2>From business requirement to workplace performance.</h2></div>
+      <p>A learning cycle designed to keep training connected to performance rather than treating delivery as the finish line.</p>
+    </div>
+    <div class="process">
+      <div class="step"><span class="num">01</span><h3>Identify</h3><p>Define the performance or business requirement.</p></div>
+      <div class="step"><span class="num">02</span><h3>Analyse</h3><p>Gather evidence and determine the root cause.</p></div>
+      <div class="step"><span class="num">03</span><h3>Design</h3><p>Select an intervention that matches the actual gap.</p></div>
+      <div class="step"><span class="num">04</span><h3>Develop</h3><p>Create practical learning materials and job aids.</p></div>
+      <div class="step"><span class="num">05</span><h3>Deliver</h3><p>Facilitate with demonstration, practice and scenarios.</p></div>
+      <div class="step"><span class="num">06</span><h3>Assess</h3><p>Check knowledge and practical application.</p></div>
+      <div class="step"><span class="num">07</span><h3>Reinforce</h3><p>Use coaching, knowledge resources and refreshers.</p></div>
+      <div class="step"><span class="num">08</span><h3>Measure</h3><p>Look for workplace application and performance evidence.</p></div>
+      <div class="step"><span class="num">09</span><h3>Improve</h3><p>Use evidence to improve the intervention.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="evidence">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Evidence Room</div><h2>Evidence in practice.</h2></div>
+      <p>The final portfolio should replace claims with anonymised artefacts wherever confidentiality allows.</p>
+    </div>
+    <div class="evidence">
+      <div class="evidence-item"><div class="evidence-content"><h3>Training Needs Analysis</h3><p>TNA findings, gap analysis and recommended training priorities.</p><div class="workbook-summary"><h4>NSW Helpdesk Training Needs Analysis</h4><p>Self-assessment of 29 representatives. The results indicate knowledge gaps in Air and Sea Manifest, Certificate Utilization and complex cross-system issues.</p><ul><li>Air Manifest: 96.6% report a confidence gap.</li><li>Sea Manifest: 96.6% report a confidence gap.</li><li>Certificate Utilization: 24.1% report a confidence gap.</li><li>86.2% rely on colleagues or supervisors for guidance.</li></ul><p style="margin:10px 0 0"><strong>Priority response:</strong> hands-on manifest practice, certificate troubleshooting, integration-error diagnosis and stronger searchable knowledge resources.</p><p style="margin:10px 0 0;color:var(--muted)">Self-assessment findings; validate priorities against QA and operational performance data.</p></div><figure class="evidence-preview"><img src="tna_gap_chart.png" alt="Chart showing confidence gaps identified by the training needs analysis"><figcaption>TNA confidence-gap analysis</figcaption></figure><figure class="evidence-preview"><img src="priority_matrix.png" alt="Prioritised capability gaps and recommended training response"><figcaption>Capability priority matrix</figcaption></figure></div></div>
+      <div class="evidence-item"><div class="evidence-content"><h3>Learning Design</h3><p>Learning architecture and programme structure.</p><figure class="evidence-preview"><img src="learning_architecture.png" alt="Learning architecture showing the programme structure"><figcaption>Learning architecture</figcaption></figure></div></div>
+      <div class="evidence-item"><div class="evidence-content"><h3>Technical Training</h3><p>Azure infrastructure lab scenario for guided technical practice.</p><figure class="evidence-preview"><img src="azure_infrastructure_lab.svg" alt="Azure training lab architecture showing a learner connecting securely to a virtual machine in a virtual network, with storage and role-based access controls"><figcaption>Azure infrastructure training lab: virtual network, virtual machine, storage and role-based access.</figcaption></figure></div></div>
+      <div class="evidence-item"><div class="evidence-content"><h3>Assessment</h3><p>Competency assessment rubric.</p><figure class="evidence-preview"><img src="assessment_rubric.png" alt="Competency assessment rubric showing assessment criteria"><figcaption>Competency assessment rubric</figcaption></figure></div></div>
+      <div class="evidence-item"><div class="evidence-content"><h3>Knowledge Management</h3><p>Knowledge Base quick reference guide.</p><figure class="evidence-preview"><img src="knowledge_base_qrg.png" alt="Knowledge Base quick reference guide"><figcaption>Knowledge Base quick reference</figcaption></figure></div></div>
+      <div class="evidence-item"><div class="evidence-content"><h3>Coaching</h3><p>Performance coaching record and reinforcement example.</p><figure class="evidence-preview"><img src="coaching_record.png" alt="Performance coaching record"><figcaption>Performance coaching record</figcaption></figure></div></div>
+      <div class="evidence-item"><div class="evidence-content"><h3>Evaluation & Measurement</h3><p>Learner feedback, training dashboard or available performance evidence.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Credentials</div><h2>Learning capability backed by technical depth.</h2></div>
+    </div>
+    <div class="grid">
+      <article class="card"><span class="tag">Microsoft Azure</span><h3>AZ-104 • AZ-305 • AZ-900</h3><p>Azure administration, infrastructure solutions and fundamentals.</p></article>
+      <article class="card"><span class="tag">Security</span><h3>SC-900 + Cybersecurity</h3><p>Security, compliance, identity and cybersecurity development.</p></article>
+      <article class="card"><span class="tag">Professional focus</span><h3>L&D • Training • Capability</h3><p>Target positioning: Learning & Development Specialist, Lead Trainer, Training & Capability Specialist and Learning Partner.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container">
+    <div class="cta">
+      <div>
+        <div class="eyebrow" style="color:#a9e1d8">Contact</div>
+        <h2>Let's discuss your learning challenge.</h2>
+        <p>Whether you need onboarding, technical enablement, process training, capability development or performance support, let's explore the learning requirement and the right intervention.</p>
+      </div>
+      <a class="btn" href="mailto:graceidachaba@outlook.com">Start a conversation</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <div><strong>Grace Idachaba</strong> — Learning & Development | Technical Training | Capability Development</div>
+    <div>graceidachaba@outlook.com</div>
+  </div>
+</footer>
+</body>
+</html>

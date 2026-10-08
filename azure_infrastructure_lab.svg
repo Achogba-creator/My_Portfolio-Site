@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-labelledby="title desc">
+  <title id="title">Azure infrastructure training lab</title>
+  <desc id="desc">A learner uses secure role-based access to configure a virtual machine and storage inside an Azure virtual network.</desc>
+  <rect width="960" height="480" fill="#f3f7f6"/>
+  <path d="M0 340h960v140H0z" fill="#e4eeeb"/>
+  <text x="54" y="58" fill="#16332f" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">AZURE INFRASTRUCTURE TRAINING LAB</text>
+  <text x="54" y="88" fill="#5c6872" font-family="Segoe UI,Arial,sans-serif" font-size="14">Guided practice: deploy, secure and validate a cloud workload</text>
+  <rect x="52" y="124" width="856" height="284" rx="12" fill="#fff" stroke="#0f6b62" stroke-width="2" stroke-dasharray="8 7"/>
+  <rect x="70" y="139" width="168" height="31" rx="5" fill="#d8eee9"/>
+  <text x="86" y="160" fill="#195b53" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700">AZURE VIRTUAL NETWORK</text>
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <rect x="86" y="213" width="168" height="112" rx="8" fill="#e8f3f8" stroke="#5c93aa"/>
+    <circle cx="118" cy="250" r="17" fill="#5c93aa"/>
+    <path d="M111 251h14m-7-7v14" stroke="#fff" stroke-width="3"/>
+    <text x="105" y="286" fill="#163a49" font-size="16" font-weight="700">Learner</text>
+    <text x="105" y="306" fill="#5c6872" font-size="12">Azure portal / CLI</text>
+    <rect x="292" y="213" width="168" height="112" rx="8" fill="#edf1f7" stroke="#6c83a6"/>
+    <path d="M324 246h32v24h-32zM319 276h42" fill="none" stroke="#506b94" stroke-width="3"/>
+    <text x="312" y="300" fill="#263d5a" font-size="15" font-weight="700">RBAC controls</text>
+    <text x="312" y="317" fill="#5c6872" font-size="12">Least-privilege role</text>
+    <rect x="510" y="194" width="171" height="145" rx="8" fill="#e4f4f0" stroke="#0f6b62" stroke-width="2"/>
+    <rect x="553" y="216" width="84" height="50" rx="5" fill="#fff" stroke="#0f6b62" stroke-width="2"/>
+    <path d="M564 228h61m-61 13h61m-61 13h40" stroke="#0f6b62" stroke-width="3"/>
+    <text x="539" y="294" fill="#16332f" font-size="16" font-weight="700">Virtual machine</text>
+    <text x="543" y="316" fill="#5c6872" font-size="12">Deploy • connect • secure</text>
+    <rect x="729" y="213" width="151" height="112" rx="8" fill="#fbf1e6" stroke="#c4823b"/>
+    <path d="M771 239h67v12h-67zm0 18h67v12h-67zm0 18h67v12h-67z" fill="none" stroke="#ad6b2e" stroke-width="2"/>
+    <text x="755" y="307" fill="#68441f" font-size="15" font-weight="700">Storage</text>
+    <text x="748" y="322" fill="#5c6872" font-size="12">Access &amp; data practice</text>
+  </g>
+  <g fill="none" stroke="#526d6a" stroke-width="3">
+    <path d="M254 267h34"/><path d="m280 259 9 8-9 8"/>
+    <path d="M460 267h44"/><path d="m496 259 9 8-9 8"/>
+    <path d="M681 267h40"/><path d="m712 259 9 8-9 8"/>
+  </g>
+  <text x="54" y="448" fill="#52615f" font-family="Segoe UI,Arial,sans-serif" font-size="13">Practice outcomes: resource deployment, network understanding, access control and troubleshooting</text>
+</svg>
